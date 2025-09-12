@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+canvas {
+  pointer-events: none;
+}
+
+body {
+  @apply bg-[#222f3a];
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Pacifico', 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.animate-scroll {
+  animation: marquee calc(var(--scroll-duration) * 2 + 4s) linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes marquee {
+  0%,
+  2.5% {
+    transform: translateX(0);
+  }
+  45.5%,
+  54.5% {
+    transform: translateX(var(--scroll-distance));
+  }
+  97.5%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.gradient {
+  position: relative;
+  background-image: var(--startGradient);
+  z-index: 1;
+}
+
+.gradient::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: var(--endGradient);
+  z-index: -1;
+  transition: opacity 150ms linear;
+  opacity: 0;
+  
+}
+
+.gradient:hover::before {
+  opacity: 1;
+}

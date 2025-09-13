@@ -53,7 +53,7 @@ export default function MainPage({ weather, lastFmData }: MainPageProps) {
                         })}
                     </div>
                 </span>
-                {showDev && process.env.NODE_ENV === "development" ? (
+                {showDev && (
                     <DevMenu
                         setShowDev={setShowDev}
                         showTeamBoxes={showTeamBoxes}
@@ -65,7 +65,8 @@ export default function MainPage({ weather, lastFmData }: MainPageProps) {
                         setShowWidgets={setShowWidgets}
                         setShowBackground={setShowBackground}
                     />
-                ) : (
+                )}
+                {process.env.NODE_ENV === "development" && (
                     <IoSettings className="absolute top-0 text-[36px] text-white m-2" onClick={() => setShowDev(true)} />
                 )}
             </div>

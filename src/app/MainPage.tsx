@@ -53,7 +53,7 @@ export default function MainPage({ weather, lastFmData }: MainPageProps) {
                         })}
                     </div>
                 </span>
-                {showDev && process.env.environment !== "production" ? (
+                {showDev && process.env.NODE_ENV === "development" ? (
                     <DevMenu
                         setShowDev={setShowDev}
                         showTeamBoxes={showTeamBoxes}

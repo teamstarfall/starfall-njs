@@ -15,6 +15,12 @@ const nextConfig: NextConfig = {
                 port: "",
                 pathname: "/**",
             },
+            {
+                protocol: "https",
+                hostname: "e621dle.starfall.team",
+                port: "",
+                pathname: "/**",
+            },
         ],
     },
 };

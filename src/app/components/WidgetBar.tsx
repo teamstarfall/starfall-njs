@@ -14,9 +14,9 @@ const WidgetBarComponent = ({ weather }: { weather: WeatherInfo | null }) => {
     }, []);
 
     return (
-        <div className="flex flex-row justify-between items-center p-5 max-w-[900px] max-h-[100px] mx-auto w-full py-6 m-4 bg-gray-800 border-2 border-white rounded-2xl shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
+        <div className="flex flex-row justify-between items-center p-5 max-w-[1265px] max-h-[100px] mx-auto w-full py-6 m-4 bg-gray-800 border-2 border-white rounded-2xl shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
             <div className="flex flex-row items-center text-white">
-                <span className="w-20 h-20">
+                <span className="w-20 h-17">
                     {weather && (
                         <Image src={weather?.iconUrl} alt="weather?.weather[0].description" height={64} width={64} />
                     )}

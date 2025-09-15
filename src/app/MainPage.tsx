@@ -1,6 +1,7 @@
 "use client";
 import { useLanyard } from "react-use-lanyard";
 import members from "../../resources/members";
+import sites from "../../resources/sites";
 import TeamBox from "./components/TeamBox";
 import ParallaxBackground from "./components/Background";
 import DevMenu from "./components/DevMenu";
@@ -8,6 +9,7 @@ import { useState } from "react";
 import { IoSettings } from "react-icons/io5";
 import WidgetBarComponent from "./components/WidgetBar";
 import { MainPageProps } from "./types";
+import FooterComponent from "./components/Footer";
 
 export default function MainPage({ weather, lastFmData }: MainPageProps) {
     const [showDev, setShowDev] = useState(false);
@@ -52,6 +54,9 @@ export default function MainPage({ weather, lastFmData }: MainPageProps) {
                             );
                         })}
                     </div>
+                </span>
+                <span>
+                    <FooterComponent/>
                 </span>
                 {showDev && (
                     <DevMenu

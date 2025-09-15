@@ -9,11 +9,21 @@ export type TeamMember = {
     bg_color: string;
 };
 
+export type Site = {
+    id: number;
+    name: string;
+    url: string;
+    favicon: string;
+    color: string;
+    faviconColor: string;
+};
+
 export type Social = {
     name: string;
     url: string;
 };
 
+import { Url } from "next/dist/shared/lib/router/router";
 import { Dispatch, SetStateAction } from "react";
 import { LanyardData } from "react-use-lanyard";
 
@@ -69,6 +79,10 @@ export type TeamBoxProps = {
     member: TeamMember;
     status: LanyardData | undefined;
     lastFm: Track | null;
+};
+
+export type SitesComponentProps = {
+    site: Site;
 };
 
 export type DiscordStatus = {

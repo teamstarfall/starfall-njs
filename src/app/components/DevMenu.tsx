@@ -6,6 +6,8 @@ const DevMenu: React.FC<DevMenuProps> = ({
     showText,
     setShowWidgets,
     showWidgets,
+    setShowFooter,
+    showFooter,
     setShowText,
     showBackground,
     setShowBackground,
@@ -32,6 +34,12 @@ const DevMenu: React.FC<DevMenuProps> = ({
                     onClick={() => setShowWidgets(!showWidgets)}
                 >
                     {showTeamBoxes ? "Hide" : "Show"} Widgets
+                </button>
+                <button
+                    className="border-2 bg-gray-700 hover:bg-gray-500 rounded-md w-[150px] pd-2 text-white"
+                    onClick={() => setShowFooter(!showFooter)}
+                >
+                    {showTeamBoxes ? "Hide" : "Show"} Footer
                 </button>
                 <button
                     className="border-2 bg-gray-700 hover:bg-gray-500 rounded-md w-[150px] pd-2 text-white"

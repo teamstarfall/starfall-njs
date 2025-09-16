@@ -25,9 +25,9 @@ const FooterComponent = () => {
                         )
                     </span>
                 </span>
-                <span className="flex flex-row pl-10 items-center px-4 gap-2">
+                <span className="flex flex-row pl-10 items-center px-4 gap-4">
                     Our Sites: 
-                    <span className="flex flex-row place-content-between gap-2">
+                    <span className="flex flex-row place-content-between gap-4">
                         {sites.map((site: Site) => {
                             return (
                                 <SitesComponent

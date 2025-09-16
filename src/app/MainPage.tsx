@@ -16,6 +16,7 @@ export default function MainPage({ weather, lastFmData }: MainPageProps) {
     const [showTeamBoxes, setShowTeamBoxes] = useState(true);
     const [showText, setShowText] = useState(true);
     const [showWidgets, setShowWidgets] = useState(true);
+    const [showFooter, setShowFooter] = useState(true);
     const [showBackground, setShowBackground] = useState(true);
 
     const lanyard = useLanyard({
@@ -55,7 +56,7 @@ export default function MainPage({ weather, lastFmData }: MainPageProps) {
                         })}
                     </div>
                 </span>
-                <span>
+                <span className={`${showFooter ? "opacity-100" : "opacity-0"}`}>
                     <FooterComponent/>
                 </span>
                 {showDev && (
@@ -63,11 +64,13 @@ export default function MainPage({ weather, lastFmData }: MainPageProps) {
                         setShowDev={setShowDev}
                         showTeamBoxes={showTeamBoxes}
                         showWidgets={showWidgets}
+                        showFooter={showFooter}
                         showBackground={showBackground}
                         setShowTeamBoxes={setShowTeamBoxes}
                         showText={showText}
                         setShowText={setShowText}
                         setShowWidgets={setShowWidgets}
+                        setShowFooter={setShowFooter}
                         setShowBackground={setShowBackground}
                     />
                 )}

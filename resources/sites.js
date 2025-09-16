@@ -5,15 +5,15 @@ const sites = [
         url: "https://e621dle.starfall.team",
         favicon: "https://e621dle.starfall.team/favicon.ico",
         color: "rgb(21, 47, 86)",
-        faviconColor: "rgb(7, 30, 50)"
+        altColor: "rgb(7, 30, 50)"
     },
     {
         id: 1,
         name: "wordie",
         url: "https://angelolz.one/wordie",
-        favicon: "",
+        favicon: "/icons/gr_w.png",
         color: "rgb(80, 166, 71)",
-        faviconColor: "rgb(188, 164, 59)"
+        altColor: "rgb(188, 164, 59)"
     }
 ]
 

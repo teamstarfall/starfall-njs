@@ -15,18 +15,20 @@ const WidgetBarComponent = ({ weather }: { weather: WeatherInfo | null }) => {
 
     return (
         <div className="flex flex-row justify-between items-center p-5 max-w-[1265px] max-h-[100px] mx-auto w-full py-6 m-4 bg-gray-800 border-2 border-white rounded-2xl shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
-            <div className="flex flex-row items-center text-white">
-                <span className="w-20 h-17">
-                    {weather && (
-                        <Image src={weather?.iconUrl} alt="weather?.weather[0].description" height={64} width={64} />
-                    )}
-                </span>
-                <div>
-                    <p className="font-bold">{weather ? `${weather.name}, ${weather?.sys.country}` : "--"}</p>
-                    <p>
-                        {Math.floor(weather?.main.temp || 0)}°F | {weather?.weather[0].description || "--"}
-                    </p>
-                </div>
+            <div>
+                <a className="flex flex-row items-center text-white" href="https://openweathermap.org/city/5586437" target="_blank" rel="noopener noreferrer">
+                    <span className="w-20 h-17">
+                        {weather && (
+                            <Image src={weather?.iconUrl} alt="weather?.weather[0].description" height={64} width={64} />
+                        )}
+                    </span>
+                    <div>
+                        <p className="font-bold">{weather ? `${weather.name}, ${weather?.sys.country}` : "--"}</p>
+                        <p>
+                            {Math.floor(weather?.main.temp || 0)}°F | {weather?.weather[0].description || "--"}
+                        </p>
+                    </div>
+                </a>
             </div>
             <div className="text-white text-right">
                 <p>{time.toLocaleString("en-US", { timeZone: "America/Denver" })}</p>

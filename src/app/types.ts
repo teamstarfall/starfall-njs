@@ -15,7 +15,6 @@ export type Site = {
     url: string;
     favicon: string;
     color: string;
-    faviconColor: string;
 };
 
 export type Social = {
@@ -31,11 +30,13 @@ export type DevMenuProps = {
     showTeamBoxes: boolean;
     showText: boolean;
     showWidgets: boolean;
+    showFooter: boolean;
     showBackground: boolean;
     setShowTeamBoxes: Dispatch<SetStateAction<boolean>>;
     setShowDev: Dispatch<SetStateAction<boolean>>;
     setShowText: Dispatch<SetStateAction<boolean>>;
     setShowWidgets: Dispatch<SetStateAction<boolean>>;
+    setShowFooter: Dispatch<SetStateAction<boolean>>;
     setShowBackground: Dispatch<SetStateAction<boolean>>;
 };
 
